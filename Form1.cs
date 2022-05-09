@@ -28,7 +28,7 @@ namespace WF_CW_Redactor
             }
             //c = this.BackColor;
             menuStrip_Eng.Visible = false;
-            
+            ContextMenuStrip = contextMenuStrip2;
             BoldToolStripMenuItemRUS.Checked = false;
             ItalicToolStripMenuItemRUS.Checked = false;
             UnderlineToolStripMenuItemRUS.Checked = false;
@@ -68,6 +68,7 @@ namespace WF_CW_Redactor
                 ToolTip();
                 menuStrip_Eng.Visible = true;
                 menuStrip_Rus.Visible = false;
+                this.ContextMenuStrip = contextMenuStrip1;
                 this.MainMenuStrip = menuStrip_Eng;
             }
             else
@@ -78,8 +79,7 @@ namespace WF_CW_Redactor
                 ToolTip();
                 menuStrip_Eng.Visible = false;
                 menuStrip_Rus.Visible = true;
-                contextMenuStrip1.Enabled = false;
-                contextMenuStrip2.Enabled = true;
+                this.ContextMenuStrip = contextMenuStrip2;
                 this.MainMenuStrip = menuStrip_Rus;
             }
         }
